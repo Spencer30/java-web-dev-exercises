@@ -23,8 +23,13 @@ public class Menu {
      * @param menuItem the {@link MenuItem} to add, please not be null
      */
     public void addMenuItem(MenuItem menuItem) {
-        menu.add(menuItem);
-        lastUpdated = LocalDateTime.now(); // update last updated to now
+        if(menu.contains(menuItem)){
+            System.out.println("Sorry, that menu item is already in the menu.");
+        } else {
+            menu.add(menuItem);
+            lastUpdated = LocalDateTime.now(); // update last updated to now
+        }
+
     }
 
     /**
