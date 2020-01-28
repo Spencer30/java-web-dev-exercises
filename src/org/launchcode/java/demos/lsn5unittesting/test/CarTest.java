@@ -5,8 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.launchcode.java.demos.lsn5unittesting.main.Car;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 public class CarTest {
 
@@ -24,10 +23,11 @@ public class CarTest {
     }
     //TODO: constructor sets gasTankLevel properly
 
-//    @Test
-//    public void testInitialGas() {
-//        Car test_car;
-//    }
+    @Test
+    public void testInitialGas() {
+        Car myCar = new Car ("Toyota", "Highlander", 12, 25);
+        assertFalse(myCar.getGasTankSize() == 0);
+    }
 
     //TODO: gasTankLevel is accurate after driving within tank range
     @Test
